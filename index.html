@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+        * {
+            font-family: monospace;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-size: 20px;
+            background-color: #f0f8ff;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: #2196F6;
+            padding: 24px;
+        }
+
+        .intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            text-align: center;
+        }
+
+        .button {
+            height: 40px;
+            width: 140px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            color: white;
+            background-color: darkblue;
+        }
+
+        header h1 {
+            width: 100%;
+            margin: 0 0 12px;
+            color: white;
+        }
+
+        img {
+            height: 200px;
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 1px solid gray;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2196F6;
+            font-size: 50px;
+        }
+
+        .submit {
+            height: 40px;
+            width: 140px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            background-color: #2196F6;
+        }
+
+        .submit:hover {
+            background-color: #0371cc;
+        }
+
+        .input {
+            height: 25px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+
+        .fixedbutton {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            height: 70px;
+            width: 70px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            color: white;
+            background-color: #2196F6;
+        }
+
+        footer {
+            min-height: 124px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: gray;
+        }
+
+        @media (max-width: 600px) {
+            .intro {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 38px;
+            }
+
+            section {
+                margin: 10px;
+                padding: 16px;
+            }
+
+            main {
+                padding: 10px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="intro">
+            <h1>Welcome to my portfolio</h1>
+
+            <a href="#about"><button class="button">About</button></a>
+            <a href="#skills"><button class="button">Skills</button></a>
+            <a href="#projects"><button class="button">Projects</button></a>
+            <a href="#contact"><button class="button">Contact</button></a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>Karri Balaji</h1>
+            <img src="C:\Users\Admin\Documents\PHOTOGRAPH.jpeg" alt="Photo of Karri Balaji">
+
+            <p>I am a passionate web developer with a focus on front-end technologies.</p>
+            <p>I am currently studying at <em>Scaler School of Technology</em>.</p>
+            <p>I have learned web development from Code With Swaroop.</p>
+            <p>You can click here to check out what I have learned in HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <section id="skills">
+            <h1>My Skills</h1>
+            <ol>
+                <li>Python Basics</li>
+                <li>HTML Basics</li>
+                <li>CSS Basics</li>
+                <li>JavaScript Basics</li>
+            </ol>
+        </section>
+
+        <section id="projects">
+            <h1>Projects</h1>
+            <p>I’m learning and building projects. Check back soon to see what I create.</p>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <p>Feel free to get in touch with me using the form below:</p>
+
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+
+                <strong>Choose your gender</strong>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <br><br>
+
+                <strong>Select your interests</strong>
+                <input type="checkbox" id="coding" name="interests" value="coding">
+                <label for="coding">Coding</label>
+                <input type="checkbox" id="reading" name="interests" value="reading">
+                <label for="reading">Reading</label>
+                <br><br>
+
+                <label for="bio">Bio (up to 200 characters):</label>
+                <input type="text" id="bio" name="bio" maxlength="200">
+                <br><br>
+
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <button class="fixedbutton" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        TOP
+    </button>
+
+    <footer>
+        <p>© 2026 My Portfolio</p>
+    </footer>
+</body>
+</html>
